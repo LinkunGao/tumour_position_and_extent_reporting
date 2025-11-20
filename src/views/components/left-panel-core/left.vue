@@ -3,7 +3,7 @@
     <div v-show="debug_mode" ref="c_gui" class="left_gui"></div>
     <div ref="canvas_container" class="canvas_container"></div>
     <div ref="slice_index_container" class="copper3d_sliceNumber">
-      Tumour Segmentation Panel
+      Breast MRI
     </div>
 
     <Upload
@@ -367,7 +367,7 @@ const sendInitMaskToBackend = async () => {
 
 const loadJsonMasks = (url: string) => {
   switchAnimationStatus("flex", "Loading masks data......");
-
+  
   const xhr = new XMLHttpRequest();
   xhr.open("GET", url, true);
   xhr.responseType = "json";
@@ -474,6 +474,7 @@ const getMaskData = async (
     clearMaskMeshObj(currentCaseId);
     sendInitMaskToBackend();
   } else {
+ 
     await sendReplaceMask(body);
   }
 };
@@ -701,6 +702,7 @@ async function onCaseSwitched(casename: string) {
   await getInitData();
 
   if (loadedUrls[casename]) {
+ 
     switchAnimationStatus(
       "flex",
       "Prepare and Loading masks data, please wait......"
@@ -713,7 +715,9 @@ async function onCaseSwitched(casename: string) {
       caseUrls.value.nrrdUrls = allContrastUrls;
     }
   } else {
-    
+   
+    // will go this way first
+
     switchAnimationStatus("flex", "Prepare Nrrd files, please wait......");
     // await getCaseFileUrls(value);
 

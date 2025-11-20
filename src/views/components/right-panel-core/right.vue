@@ -4,10 +4,10 @@
       <div class="loading_text text-cyan-darken-3">Load tumour model...</div>
     </div>
     <v-card class="right-value-panel mt-2 guide-right-value-panel" color="right-display-panel">
-      <div color="primary">
+      <!-- <div color="primary">
         <span>Tumour volume:</span> <span>{{ tumourVolume }} cm<sup>3</sup></span>
       </div>
-      <div><span>Tumour extent:</span> <span>{{ tumourExtent }} mm</span></div>
+      <div><span>Tumour extent:</span> <span>{{ tumourExtent }} mm</span></div> -->
       <div class="skin"><span>Skin:</span> <span>{{ skinDist }} mm</span></div>
       <div class="ribcage"><span>Ribcage:</span> <span>{{ ribDist }} mm</span></div>
       <div class="nipple">

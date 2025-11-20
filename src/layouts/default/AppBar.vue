@@ -21,7 +21,7 @@
     <!-- pink-darken-3 text-deep-orange-->
     <v-app-bar-title >
       <span class="text-capitalize"
-        >Tumour Position & Extent Reporting
+        >Breast Tumour Reporting
       </span>
       <span class="text-body-2 font-italic text-deep-orange">v3.0.0</span>
     </v-app-bar-title>
